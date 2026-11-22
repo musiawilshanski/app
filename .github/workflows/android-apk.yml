@@ -17,6 +17,15 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate 30,000 additional offline dictionary entries
+        run: |
+          python -m pip install --upgrade pip
+          pip install word2word==1.0.0
+          python tools/build_dictionary.py
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
