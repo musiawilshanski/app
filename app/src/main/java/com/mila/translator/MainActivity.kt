@@ -72,7 +72,7 @@ class MainActivity : Activity() {
         page.addView(direction); direction.setOnClickListener { englishToHebrew = !englishToHebrew; updateDirection(); translate() }; page.addView(space(18))
         val inputCard = LinearLayout(this).apply { orientation=LinearLayout.VERTICAL; background=rounded(Color.WHITE,dp(20).toFloat()); setPadding(dp(18),dp(16),dp(18),dp(16)) }
         directionText = text("אנגלית ← לעברית",12f,muted,true); inputCard.addView(directionText)
-        input = EditText(this).apply { textSize=20f; setTextColor(ink); hintTextColor=Color.rgb(166,174,190); hint="הקלידו מילה או ביטוי..."; background=null; minLines=2; maxLines=4; setPadding(0,dp(12),0,dp(8)); textDirection=View.TEXT_DIRECTION_FIRST_STRONG }
+        input = EditText(this).apply { textSize=20f; setTextColor(ink); setHintTextColor(Color.rgb(166,174,190)); hint="הקלידו מילה או ביטוי..."; background=null; minLines=2; maxLines=4; setPadding(0,dp(12),0,dp(8)); textDirection=View.TEXT_DIRECTION_FIRST_STRONG }
         inputCard.addView(input,LinearLayout.LayoutParams(-1,-2))
         val actions = LinearLayout(this).apply { gravity=Gravity.CENTER_VERTICAL; orientation=LinearLayout.HORIZONTAL }
         val clear = TextView(this).apply { text="ניקוי"; textSize=13f; setTextColor(muted); gravity=Gravity.CENTER }
