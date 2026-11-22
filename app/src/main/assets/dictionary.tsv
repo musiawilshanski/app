@@ -1,0 +1,466 @@
+hello	שלום
+hi	היי
+good morning	בוקר טוב
+good afternoon	צהריים טובים
+good evening	ערב טוב
+good night	לילה טוב
+goodbye	להתראות
+bye	ביי
+please	בבקשה
+thank you	תודה
+thanks	תודה
+you're welcome	על לא דבר
+sorry	סליחה
+excuse me	סליחה
+yes	כן
+no	לא
+maybe	אולי
+of course	כמובן
+okay	בסדר
+all right	בסדר גמור
+I	אני
+you	אתה
+he	הוא
+she	היא
+we	אנחנו
+they	הם
+it	זה
+my	שלי
+your	שלך
+his	שלו
+her	שלה
+our	שלנו
+their	שלהם
+this	זה
+that	ההוא
+these	אלה
+those	ההם
+who	מי
+what	מה
+where	איפה
+when	מתי
+why	למה
+how	איך
+which	איזה
+whose	של מי
+be	להיות
+have	יש / להחזיק
+do	לעשות
+go	ללכת
+come	לבוא
+get	לקבל
+make	להכין / לעשות
+know	לדעת
+think	לחשוב
+see	לראות
+look	להסתכל
+watch	לצפות
+hear	לשמוע
+listen	להקשיב
+say	לומר
+tell	לספר
+speak	לדבר
+talk	לשוחח
+ask	לשאול
+answer	לענות
+read	לקרוא
+write	לכתוב
+learn	ללמוד
+teach	ללמד
+understand	להבין
+remember	לזכור
+forget	לשכוח
+want	לרצות
+need	להצטרך
+like	לאהוב / לחבב
+love	לאהוב
+hate	לשנוא
+feel	להרגיש
+try	לנסות
+use	להשתמש
+work	לעבוד
+play	לשחק
+help	לעזור
+give	לתת
+take	לקחת
+bring	להביא
+buy	לקנות
+pay	לשלם
+sell	למכור
+find	למצוא
+lose	לאבד
+open	לפתוח
+close	לסגור
+start	להתחיל
+finish	לסיים
+stop	לעצור
+wait	לחכות
+stay	להישאר
+leave	לעזוב
+live	לחיות / לגור
+move	לזוז / לעבור
+walk	ללכת ברגל
+run	לרוץ
+sit	לשבת
+stand	לעמוד
+sleep	לישון
+wake up	להתעורר
+eat	לאכול
+drink	לשתות
+cook	לבשל
+clean	לנקות
+wash	לשטוף
+wear	ללבוש
+drive	לנהוג
+travel	לטייל
+visit	לבקר
+meet	לפגוש
+call	להתקשר
+send	לשלוח
+show	להראות
+keep	לשמור
+change	לשנות
+choose	לבחור
+decide	להחליט
+hope	לקוות
+believe	להאמין
+happen	לקרות
+turn	לפנות / לסובב
+follow	לעקוב
+return	לחזור
+build	לבנות
+break	לשבור
+cut	לחתוך
+draw	לצייר
+sing	לשיר
+dance	לרקוד
+smile	לחייך
+laugh	לצחוק
+cry	לבכות
+win	לנצח
+pass	לעבור
+fail	להיכשל
+time	זמן
+day	יום
+week	שבוע
+month	חודש
+year	שנה
+today	היום
+tomorrow	מחר
+yesterday	אתמול
+morning	בוקר
+afternoon	אחר הצהריים
+evening	ערב
+night	לילה
+hour	שעה
+minute	דקה
+second	שנייה
+now	עכשיו
+later	מאוחר יותר
+early	מוקדם
+late	מאוחר
+always	תמיד
+usually	בדרך כלל
+often	לעיתים קרובות
+sometimes	לפעמים
+never	אף פעם
+again	שוב
+already	כבר
+soon	בקרוב
+here	כאן
+there	שם
+everywhere	בכל מקום
+inside	בפנים
+outside	בחוץ
+up	למעלה
+down	למטה
+left	שמאל
+right	ימין
+near	קרוב
+far	רחוק
+before	לפני
+after	אחרי
+during	במהלך
+between	בין
+under	מתחת
+over	מעל
+with	עם
+without	בלי
+about	על אודות
+because	בגלל
+but	אבל
+and	ו
+or	או
+if	אם
+then	אז
+also	גם
+only	רק
+very	מאוד
+too	גם / מדי
+enough	מספיק
+good	טוב
+bad	רע
+great	נהדר
+beautiful	יפה
+big	גדול
+small	קטן
+long	ארוך
+short	קצר
+tall	גבוה
+low	נמוך
+high	גבוה
+new	חדש
+old	ישן
+young	צעיר
+happy	שמח
+sad	עצוב
+angry	כועס
+tired	עייף
+hungry	רעב
+thirsty	צמא
+easy	קל
+difficult	קשה
+hard	קשה
+simple	פשוט
+important	חשוב
+interesting	מעניין
+boring	משעמם
+funny	מצחיק
+serious	רציני
+kind	אדיב
+nice	נחמד
+friendly	ידידותי
+smart	חכם
+clever	פיקח
+strong	חזק
+weak	חלש
+fast	מהיר
+slow	איטי
+hot	חם
+cold	קר
+warm	חמים
+cool	קריר / מגניב
+dirty	מלוכלך
+full	מלא
+empty	ריק
+busy	עסוק
+free	חופשי / פנוי
+ready	מוכן
+sure	בטוח
+possible	אפשרי
+impossible	בלתי אפשרי
+different	שונה
+same	אותו דבר
+wrong	לא נכון
+true	אמת
+false	שקר
+safe	בטוח
+dangerous	מסוכן
+careful	זהיר
+quiet	שקט
+loud	רועש
+dark	חשוך
+bright	בהיר
+clear	ברור
+favorite	אהוב
+person	אדם
+people	אנשים
+man	גבר
+woman	אישה
+child	ילד
+children	ילדים
+boy	בן
+girl	בת
+family	משפחה
+mother	אמא
+father	אבא
+parents	הורים
+brother	אח
+sister	אחות
+friend	חבר
+teacher	מורה
+student	תלמיד
+neighbor	שכן
+name	שם
+age	גיל
+home	בית
+house	בית
+room	חדר
+door	דלת
+window	חלון
+table	שולחן
+chair	כיסא
+bed	מיטה
+kitchen	מטבח
+bathroom	חדר אמבטיה
+school	בית ספר
+class	כיתה
+lesson	שיעור
+book	ספר
+notebook	מחברת
+pen	עט
+pencil	עיפרון
+paper	נייר
+bag	תיק
+phone	טלפון
+computer	מחשב
+screen	מסך
+keyboard	מקלדת
+internet	אינטרנט
+message	הודעה
+picture	תמונה
+photo	צילום
+music	מוזיקה
+movie	סרט
+game	משחק
+story	סיפור
+question	שאלה
+problem	בעיה
+idea	רעיון
+word	מילה
+sentence	משפט
+language	שפה
+English	אנגלית
+Hebrew	עברית
+translation	תרגום
+dictionary	מילון
+food	אוכל
+water	מים
+bread	לחם
+milk	חלב
+cheese	גבינה
+egg	ביצה
+meat	בשר
+chicken	עוף
+fish	דג
+rice	אורז
+pasta	פסטה
+apple	תפוח
+banana	בננה
+orange	תפוז
+vegetable	ירק
+fruit	פרי
+sugar	סוכר
+salt	מלח
+breakfast	ארוחת בוקר
+lunch	ארוחת צהריים
+dinner	ארוחת ערב
+restaurant	מסעדה
+store	חנות
+money	כסף
+price	מחיר
+ticket	כרטיס
+street	רחוב
+road	דרך
+city	עיר
+country	מדינה
+world	עולם
+car	מכונית
+bus	אוטובוס
+train	רכבת
+plane	מטוס
+station	תחנה
+airport	שדה תעופה
+map	מפה
+place	מקום
+job	משרה
+office	משרד
+doctor	רופא
+hospital	בית חולים
+medicine	תרופה
+head	ראש
+face	פנים
+eye	עין
+ear	אוזן
+nose	אף
+mouth	פה
+hand	יד
+arm	זרוע
+leg	רגל
+foot	כף רגל
+heart	לב
+body	גוף
+health	בריאות
+weather	מזג אוויר
+sun	שמש
+moon	ירח
+star	כוכב
+sky	שמיים
+rain	גשם
+wind	רוח
+cloud	ענן
+tree	עץ
+flower	פרח
+animal	חיה
+dog	כלב
+cat	חתול
+bird	ציפור
+horse	סוס
+sea	ים
+river	נהר
+mountain	הר
+beach	חוף
+nature	טבע
+one	אחד
+two	שתיים
+three	שלוש
+four	ארבע
+five	חמש
+six	שש
+seven	שבע
+eight	שמונה
+nine	תשע
+ten	עשר
+first	ראשון
+third	שלישי
+many	הרבה
+much	הרבה
+more	יותר
+less	פחות
+few	מעט
+all	הכול
+some	כמה
+each	כל אחד
+every	כל
+another	אחר
+other	אחרים
+something	משהו
+anything	כל דבר
+nothing	כלום
+everything	הכול
+How are you?	מה שלומך?
+I'm fine	אני בסדר
+What's your name?	איך קוראים לך?
+My name is...	קוראים לי...
+Nice to meet you	נעים להכיר
+I don't know	אני לא יודע
+I understand	אני מבין
+I don't understand	אני לא מבין
+Can you help me?	אתה יכול לעזור לי?
+Where is the bathroom?	איפה השירותים?
+How much does it cost?	כמה זה עולה?
+What time is it?	מה השעה?
+See you later	נתראה אחר כך
+Have a good day	שיהיה לך יום טוב
+I am looking for...	אני מחפש...
+I need help	אני צריך עזרה
+No problem	אין בעיה
+That's great	זה נהדר
+I agree	אני מסכים
+I disagree	אני לא מסכים
+One moment, please	רגע אחד, בבקשה
+Could you repeat that?	אתה יכול לחזור על זה?
+What does this mean?	מה זה אומר?
+I am learning English	אני לומד אנגלית
+Good luck	בהצלחה
+Congratulations	מזל טוב
+Take care	שמור על עצמך
+I'm sorry	אני מצטער
+Don't worry	אל תדאג
+I am ready	אני מוכן
+Let's go	בוא נלך
+Come here	בוא לכאן
+Be careful	תיזהר
+Wait a minute	חכה רגע
+I like it	אני אוהב את זה
+I need more time	אני צריך עוד זמן
