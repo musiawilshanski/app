@@ -7,8 +7,8 @@ android {
     compileSdk = 35
     defaultConfig {
         applicationId = "com.mila.translator"
-        minSdk = 23
-        targetSdk = 35
+        minSdk = 19
+        targetSdk = 28
         versionCode = 1
         versionName = "1.0"
     }
