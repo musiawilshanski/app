@@ -257,7 +257,7 @@ class MainActivity : Activity() {
             setPadding(dp(20),dp(8),dp(20),0)
         }
         val en = EditText(this).apply { hint = "המילה באנגלית"; setSingleLine(true); textSize = 16f }
-        val he = EditText(this).apply { hint = "התרגום בעברית"; singleLine = true; textSize = 16f }
+        val he = EditText(this).apply { hint = "התרגום בעברית"; setSingleLine(true); textSize = 16f }
         box.addView(en); box.addView(he)
         val dialog = AlertDialog.Builder(this)
             .setTitle("הוספת מילה חדשה")
