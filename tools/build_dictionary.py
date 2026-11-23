@@ -4,7 +4,7 @@
 The word2word project derives bilingual associations from OpenSubtitles2018.
 The resulting associations are automatically mined and can be noisy; they are
 not a professionally edited dictionary. Keep the original hand-curated rows
-first, then append up to 30,000 distinct additional pairs.
+first, then append up to 80,000 distinct additional pairs.
 """
 from pathlib import Path
 import re
@@ -14,7 +14,7 @@ from word2word import Word2word
 
 ROOT = Path(__file__).resolve().parents[1]
 DICT = ROOT / "app/src/main/assets/dictionary.tsv"
-TARGET_ADDITIONS = 30_000
+TARGET_ADDITIONS = 80_000
 EN_RE = re.compile(r"^[A-Za-z][A-Za-z'-]{0,39}$")
 HE_RE = re.compile(r"^[א-ת][א-ת \-׳״']{0,49}$")
 
