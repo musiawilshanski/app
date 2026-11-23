@@ -38,8 +38,8 @@ class MainActivity : Activity() {
     private val mainHandler = Handler(Looper.getMainLooper())
     private var pendingSearch: Runnable? = null
     @Volatile private var searchVersion = 0
-    private var englishIndex: Map<String, Entry> = emptyMap()
-    private var hebrewIndex: Map<String, Entry> = emptyMap()
+    private var englishIndex: Map<String, List<Entry>> = emptyMap()
+    private var hebrewIndex: Map<String, List<Entry>> = emptyMap()
     private var compact = false
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
@@ -93,8 +93,8 @@ class MainActivity : Activity() {
             if (p.size == 2 && p[0].isNotBlank() && p[1].isNotBlank()) Entry(p[0], p[1]) else null
         }
         entries = (base + extra).distinctBy { it.en.toLowerCase(Locale.ROOT) + "\t" + it.he }
-        englishIndex = entries.associateBy { it.en.toLowerCase(Locale.ROOT) }
-        hebrewIndex = entries.associateBy { it.he.toLowerCase(Locale.ROOT) }
+        englishIndex = entries.groupBy { it.en.toLowerCase(Locale.ROOT) }
+        hebrewIndex = entries.groupBy { it.he.toLowerCase(Locale.ROOT) }
     }
 
     private fun rounded(color: Int, radius: Float) = GradientDrawable().apply { setColor(color); cornerRadius = radius }
@@ -232,10 +232,11 @@ class MainActivity : Activity() {
         }
         val key = q.toLowerCase(Locale.ROOT)
         val exact = if (englishToHebrew) englishIndex[key] else hebrewIndex[key]
-        if (exact != null) {
-            resultText.text = if (englishToHebrew) exact.he else exact.en
-            hintText.text = if (englishToHebrew) exact.en else exact.he
-            showSuggestions(listOf(exact)); return
+        if (!exact.isNullOrEmpty()) {
+            val translations = exact.map { if (englishToHebrew) it.he else it.en }.distinct()
+            resultText.text = translations.joinToString(" · ")
+            hintText.text = if (englishToHebrew) exact.first().en else exact.first().he
+            showSuggestions(exact); return
         }
         resultText.text = "מחפש..."
         worker.execute {
