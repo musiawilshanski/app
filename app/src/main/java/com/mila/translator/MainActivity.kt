@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.StateListDrawable
+import android.view.KeyEvent
 import android.view.Gravity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -27,11 +29,59 @@ class MainActivity : Activity() {
     private val purple = Color.rgb(100, 82, 220)
     private val bg = Color.rgb(246, 247, 252)
 
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        val focused = currentFocus
+        val count = if (::results.isInitialized) results.childCount else 0
+        val focusedIndex = if (focused != null && ::results.isInitialized) {
+            (0 until results.childCount).firstOrNull { results.getChildAt(it) === focused } ?: -1
+        } else -1
+
+        when (keyCode) {
+            KeyEvent.KEYCODE_DPAD_DOWN -> {
+                if (focused === input && count > 0) {
+                    results.getChildAt(0).requestFocus()
+                    return true
+                }
+                if (focusedIndex >= 0 && focusedIndex < count - 1) {
+                    results.getChildAt(focusedIndex + 1).requestFocus()
+                    return true
+                }
+            }
+            KeyEvent.KEYCODE_DPAD_UP -> {
+                if (focusedIndex == 0) {
+                    input.requestFocus()
+                    input.setSelection(input.text.length)
+                    return true
+                }
+                if (focusedIndex > 0) {
+                    results.getChildAt(focusedIndex - 1).requestFocus()
+                    return true
+                }
+            }
+            KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_DPAD_CENTER -> {
+                if (focused === input) {
+                    translate()
+                    if (count > 0) results.getChildAt(0).requestFocus()
+                    return true
+                }
+                if (focusedIndex >= 0) {
+                    focused?.performClick()
+                    return true
+                }
+            }
+        }
+        return super.onKeyDown(keyCode, event)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.statusBarColor = bg
-        window.navigationBarColor = bg
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            window.statusBarColor = bg
+            window.navigationBarColor = bg
+        }
+        if (android.os.Build.VERSION.SDK_INT >= 23) {
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+        }
         entries = assets.open("dictionary.tsv").bufferedReader(Charsets.UTF_8).useLines { lines ->
             lines.mapNotNull { line ->
                 val p = line.split('\t')
@@ -68,6 +118,9 @@ class MainActivity : Activity() {
             to.text = if (englishToHebrew) "🇮🇱  עברית" else "🇬🇧  English"
             directionText.text = if (englishToHebrew) "אנגלית ← לעברית" else "עברית ← לאנגלית"
         }
+        direction.isFocusable = true
+        direction.isFocusableInTouchMode = true
+        direction.isClickable = true
         direction.addView(from,LinearLayout.LayoutParams(0,dp(48),1f)); direction.addView(swap,LinearLayout.LayoutParams(dp(48),dp(48))); direction.addView(to,LinearLayout.LayoutParams(0,dp(48),1f))
         page.addView(direction); direction.setOnClickListener { englishToHebrew = !englishToHebrew; updateDirection(); translate() }; page.addView(space(18))
         val inputCard = LinearLayout(this).apply { orientation=LinearLayout.VERTICAL; background=rounded(Color.WHITE,dp(20).toFloat()); setPadding(dp(18),dp(16),dp(18),dp(16)) }
@@ -117,7 +170,19 @@ class MainActivity : Activity() {
         results.removeAllViews()
         if (items.isEmpty()) { results.addView(text("לא נמצאו תוצאות. נסו מילה אחרת.",14f,muted)); return }
         items.forEach { item ->
-            val row = LinearLayout(this).apply { orientation=LinearLayout.HORIZONTAL; gravity=Gravity.CENTER_VERTICAL; background=rounded(Color.WHITE,dp(14).toFloat()); setPadding(dp(15),dp(13),dp(15),dp(13)) }
+            val row = LinearLayout(this).apply {
+                orientation=LinearLayout.HORIZONTAL
+                gravity=Gravity.CENTER_VERTICAL
+                isFocusable = true
+                isFocusableInTouchMode = true
+                isClickable = true
+                background = StateListDrawable().apply {
+                    addState(intArrayOf(android.R.attr.state_focused), rounded(Color.rgb(235,232,255),dp(14).toFloat()))
+                    addState(intArrayOf(android.R.attr.state_pressed), rounded(Color.rgb(235,232,255),dp(14).toFloat()))
+                    addState(intArrayOf(), rounded(Color.WHITE,dp(14).toFloat()))
+                }
+                setPadding(dp(15),dp(13),dp(15),dp(13))
+            }
             val left = LinearLayout(this).apply { orientation=LinearLayout.VERTICAL }
             left.addView(text(if (englishToHebrew) item.en else item.he,16f,ink,true))
             left.addView(text(if (englishToHebrew) item.he else item.en,14f,muted))
