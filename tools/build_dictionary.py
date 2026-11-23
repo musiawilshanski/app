@@ -10,8 +10,8 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DICT = ROOT / "app/src/main/assets/dictionary.tsv"
-EN_RE = re.compile(r"^[A-Za-z][A-Za-z '\-?]{0,59}$")
-HE_RE = re.compile(r"^[א-ת][א-ת ׳״ '\-/]{0,79}$")
+EN_RE = re.compile(r"^[A-Za-z][A-Za-z '\-?.,!()]{0,59}$")
+HE_RE = re.compile(r"^[א-ת][א-ת \u05f3\u05f4 '\-/.,!?()…]{0,79}$")
 
 def main():
     rows = []
